@@ -1,0 +1,198 @@
+*{
+	-webkit-box-sizing:border-box;
+		 -moz-box-sizing:border-box;
+			box-sizing:border-box;
+}
+
+body{
+	background-color:#ccc; /*for contrast*/
+	margin:0; padding:0;
+}
+
+#vueApp{
+	width: 375px;
+	height: 279px;
+	padding: 18px 16px;
+	background-color:#fff; /*for contrast*/
+}
+
+h1, h3, h4, p{
+	margin:0;
+}
+
+.In-Theaters {
+	/* width: 118.5px;
+	height: 28.5px; */
+	font-family: 'Roboto';
+	font-size: 24px;
+	font-weight: 300;
+	color: #3b3f47;
+}
+
+.Top-Movies-This-Week {
+	/* width: 149.5px;
+	height: 16.5px; */
+	font-family: 'Roboto';
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: 0.5px;
+	color: #6b6b6b;
+	
+	margin-top:4px;
+}
+
+.movie{
+	width:343px;
+	height:156px;
+	border-radius: 2.5px;
+	background-color: #f2f3f5;
+	
+	margin-top:16px;
+}
+
+.copy{
+	padding:16px;
+	float:left;
+}
+
+.One-line-movie-title {
+	width: 206px;
+	height: 20px;
+	font-family: 'Roboto';
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.25;
+	letter-spacing: 0.4px;
+	
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.synopsis {
+	width: 206px;
+	height: 72px;
+	font-family: 'Roboto';
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.29;
+	letter-spacing: 0.5px;
+	color: #6b6b6b;
+	
+	margin-top:8px;
+	
+	overflow:hidden;
+	/* white-space: nowrap; */
+	text-overflow: ellipsis;
+}
+
+.stars{
+	margin-top:12px;
+	height: 11.8px;
+}
+
+.star {
+  width: 12.4px;
+  height: 11.8px;
+}
+
+.posterArea{
+	
+	width: 105px;
+	height: 156px;
+	/* background-color: #bd10e0; */
+	
+	float:right;
+}
+
+.posterArea img{
+	width:100%;
+	height:auto;
+}
+
+/* Sliding handled by variation of http://011.vuejs.org/examples/image-slider.html */
+#slider {
+	max-width: 100%;
+	width:343px;
+	height:156px;
+	margin: 0 auto;
+}
+
+#overflow {
+	width: 100%;
+	overflow: hidden;
+}
+
+#slides .inner {
+	width: 1000%;
+}
+
+#slides .inner {
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+
+	-webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	-moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	-o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	-ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+	-webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	-moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	-o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	-ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#slides .movie {
+	
+	float: left;
+}
+
+#slide0:checked ~ #slides .inner { margin-left: 0; }
+#slide1:checked ~ #slides .inner { margin-left: -100%; }
+#slide2:checked ~ #slides .inner { margin-left: -200%; }
+#slide3:checked ~ #slides .inner { margin-left: -300%; }
+#slide4:checked ~ #slides .inner { margin-left: -400%; }
+#slide5:checked ~ #slides .inner { margin-left: -500%; }
+#slide6:checked ~ #slides .inner { margin-left: -600%; }
+#slide7:checked ~ #slides .inner { margin-left: -700%; }
+#slide8:checked ~ #slides .inner { margin-left: -800%; }
+#slide9:checked ~ #slides .inner { margin-left: -900%; }
+
+
+#slider input[type="radio"] {
+	display: none;
+}
+
+#pills{
+	text-align:center;
+	margin: 0 auto;
+}
+
+#slider label {
+	background-color: transparent;
+	display: inline-block;
+	cursor: pointer;
+	width: 6px;
+	height: 6px;
+	border: solid 1px #979797;
+	border-radius: 3px;
+	margin: 16px 3px;
+}
+
+#slide0:checked ~ #pills>label[for="slide0"],
+#slide1:checked ~ #pills>label[for="slide1"],
+#slide2:checked ~ #pills>label[for="slide2"],
+#slide3:checked ~ #pills>label[for="slide3"],
+#slide4:checked ~ #pills>label[for="slide4"],
+#slide5:checked ~ #pills>label[for="slide5"],
+#slide6:checked ~ #pills>label[for="slide6"],
+#slide7:checked ~ #pills>label[for="slide7"],
+#slide8:checked ~ #pills>label[for="slide8"],
+#slide9:checked ~ #pills>label[for="slide9"] {
+	background-color: #979797;
+}
