@@ -4,6 +4,8 @@
 	<title>Blue Bite - Rotten Tomatoes Test</title>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	<meta name="viewport" content="width=375, initial-scale=1">
 </head>
 <body>
 
@@ -65,9 +67,9 @@
 			picked: "0"
 		},
 		ready: function() {
-			console.log(this);
+			//console.log(this);
 			var url = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?limit="+this.limit+"&country=us&apikey=6czx2pst57j3g47cvq9erte5";
-			this.$http.jsonp(url).then((response) => {
+			this.$http.jsonp(url).then(function(response) {
 				/*
 				// get status
 				response.status;
@@ -81,10 +83,10 @@
 				this.$set('someData', response.json())
 				*/
 				
-				console.log(response.json());
+				//console.log(response.json());
 				
 				this.movies = response.json().movies;
-			}, (response) => {
+			}, function(response) {
 				console.error("Error with AJAX Request");
 			});
 		},
