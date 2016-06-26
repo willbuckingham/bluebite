@@ -16,8 +16,12 @@ body{
 	background-color:#fff; /*for contrast*/
 }
 
-h1, h3, h4, p{
+h1, h2, h3, h4, p{
 	margin:0;
+}
+
+.clear{
+	clear:both;
 }
 
 .In-Theaters {
@@ -41,6 +45,25 @@ h1, h3, h4, p{
 	margin-top:4px;
 }
 
+.View-More {
+	width: 128px;
+	height: 16.5px;
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	text-align: right;
+	color: #276cf2;
+	
+	margin-top:8px;
+}
+
+.View-More a,
+.View-More a:visited{
+	text-decoration:none;
+	color: #276cf2;
+}
+
 .movie{
 	width:343px;
 	height:156px;
@@ -53,6 +76,16 @@ h1, h3, h4, p{
 .copy{
 	padding:16px;
 	float:left;
+}
+
+#titleLeft{
+	width: 206px;
+	float:left;
+}
+#linkRight{
+	width: 128px;
+	float:right;
+	text-align:right;
 }
 
 .One-line-movie-title {
@@ -92,8 +125,8 @@ h1, h3, h4, p{
 }
 
 .star {
-  width: 12.4px;
-  height: 11.8px;
+	width: 12.4px;
+	height: 11.8px;
 }
 
 .posterArea{
@@ -157,12 +190,6 @@ h1, h3, h4, p{
 #slide2:checked ~ #slides .inner { margin-left: -200%; }
 #slide3:checked ~ #slides .inner { margin-left: -300%; }
 #slide4:checked ~ #slides .inner { margin-left: -400%; }
-#slide5:checked ~ #slides .inner { margin-left: -500%; }
-#slide6:checked ~ #slides .inner { margin-left: -600%; }
-#slide7:checked ~ #slides .inner { margin-left: -700%; }
-#slide8:checked ~ #slides .inner { margin-left: -800%; }
-#slide9:checked ~ #slides .inner { margin-left: -900%; }
-
 
 #slider input[type="radio"] {
 	display: none;
@@ -188,11 +215,6 @@ h1, h3, h4, p{
 #slide1:checked ~ #pills>label[for="slide1"],
 #slide2:checked ~ #pills>label[for="slide2"],
 #slide3:checked ~ #pills>label[for="slide3"],
-#slide4:checked ~ #pills>label[for="slide4"],
-#slide5:checked ~ #pills>label[for="slide5"],
-#slide6:checked ~ #pills>label[for="slide6"],
-#slide7:checked ~ #pills>label[for="slide7"],
-#slide8:checked ~ #pills>label[for="slide8"],
-#slide9:checked ~ #pills>label[for="slide9"] {
+#slide4:checked ~ #pills>label[for="slide4"] {
 	background-color: #979797;
 }
