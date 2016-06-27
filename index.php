@@ -5,7 +5,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	
-	<meta name="viewport" content="width=375, initial-scale=1">
+	<meta name="viewport" content="width=375">
 </head>
 <body>
 
